@@ -25,12 +25,11 @@ sub bundle_platypus {
     local $Data::Dumper::Varname = "MIBP_VAR";
     local $Data::Dumper::Useqq = 1;
     my $args = Dumper(\%args);
-warn $args;
     $args =~ s/^\s*\$MIBP_VAR\d+\s*=\s*{//;
     $args =~ s/}\s*;?\s*$//;
 
     $self->Makefile->postamble(<<EOM);
-bundle_platypus: metafile
+platypus: metafile
 \t\$(FULLPERLRUN) -M$class -e '$class->new($args)->bundle_from_meta()'
 EOM
 }
@@ -60,7 +59,7 @@ Module::Install::Bundle::Platypus - Bundle Your Mac App With Platypus
         version => $version, # uses dist version by default
     WriteAll;
 
-    > make bundle_platypus
+    > make platypus
 
 =head1 SEE ALSO
 
