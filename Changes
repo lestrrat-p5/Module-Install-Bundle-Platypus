@@ -1,5 +1,9 @@
 Changes
 =======
 
+0.00002 - 17 Dec 2009
+    - change bundle_platypus to platypus. nobody's going to use that
+      keyword, I suspect. So we'll take it.
+
 0.00001 - 17 Dec 2009
     - Initial release

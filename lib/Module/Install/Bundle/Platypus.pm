@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Data::Dumper;
 
-our $VERSION = '0.00001';
+our $VERSION = '0.00002';
 
 use base qw(Module::Install::Base);
 
